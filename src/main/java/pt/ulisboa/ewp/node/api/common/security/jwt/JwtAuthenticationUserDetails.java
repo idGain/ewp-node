@@ -4,7 +4,7 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 
 public class JwtAuthenticationUserDetails {
 
-  private DecodedJWT token;
+  private final DecodedJWT token;
 
   public JwtAuthenticationUserDetails(DecodedJWT token) {
     this.token = token;

@@ -23,7 +23,7 @@ import pt.ulisboa.ewp.node.service.http.log.ewp.EwpHttpCommunicationLogService;
 @Order(Integer.MIN_VALUE)
 public class EwpApiRequestFilter extends OncePerRequestFilter {
 
-  private EwpHttpCommunicationLogService ewpCommunicationLogService;
+  private final EwpHttpCommunicationLogService ewpCommunicationLogService;
 
   public EwpApiRequestFilter(EwpHttpCommunicationLogService ewpCommunicationLogService) {
     this.ewpCommunicationLogService = ewpCommunicationLogService;

@@ -22,7 +22,7 @@ public class MessageService {
 
   @Autowired private Logger logger;
 
-  private Collection<Message> queue = new HashSet<>();
+  private final Collection<Message> queue = new HashSet<>();
 
   public static MessageService getInstance() {
     return ApplicationContextProvider.getApplicationContext().getBean(MessageService.class);

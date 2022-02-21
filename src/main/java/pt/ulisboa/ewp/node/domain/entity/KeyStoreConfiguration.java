@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
 import pt.ulisboa.ewp.node.domain.listener.EntityAuditListener;
 
 @Entity
@@ -39,7 +40,8 @@ public class KeyStoreConfiguration {
   }
 
   @Lob
-  @Column(name = "keystore", columnDefinition = "BLOB")
+  @Type(type = "org.hibernate.type.BinaryType")
+  @Column(name = "keystore", columnDefinition = "BYTEA") // previously BLOB
   public byte[] getKeystore() {
     return keystore;
   }

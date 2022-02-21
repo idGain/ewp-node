@@ -52,7 +52,7 @@ public class ApiUtils {
       return result.toString();
 
     } else {
-      throw new IllegalArgumentException("Unsupported media type: " + mediaType.toString());
+      throw new IllegalArgumentException("Unsupported media type: " + mediaType);
     }
   }
 }

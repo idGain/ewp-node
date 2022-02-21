@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class ApiOperationStatusDTO {
 
-  private boolean success;
+  private final boolean success;
 
   public ApiOperationStatusDTO() {
     this(true);

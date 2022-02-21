@@ -8,10 +8,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 public class Message implements Serializable {
 
   @JsonInclude(JsonInclude.Include.NON_NULL)
-  private String context;
+  private final String context;
 
-  private Severity severity;
-  private String summary;
+  private final Severity severity;
+  private final String summary;
 
   private Message(String context, Severity severity, String summary) {
     this.context = context;
@@ -73,8 +73,8 @@ public class Message implements Serializable {
   public static class Builder {
 
     private String context;
-    private Severity severity;
-    private String summary;
+    private final Severity severity;
+    private final String summary;
 
     public Builder(String summary) {
       this(Severity.INFO, summary);

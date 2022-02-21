@@ -17,7 +17,7 @@ import pt.ulisboa.ewp.node.utils.http.HttpUtils;
 
 public class EwpRequest implements Serializable {
 
-  private String id = UUID.randomUUID().toString();
+  private final String id = UUID.randomUUID().toString();
   private HttpMethod method;
   private String urlWithoutQueryParams;
   private ExtendedHttpHeaders headers = new ExtendedHttpHeaders();

@@ -12,7 +12,7 @@ public class EwpInterInstitutionalAgreementApprovalApiConfiguration extends EwpA
   public static final String API_NAME = "Interinstitutional Agreements API";
 
   private String url;
-  private BigInteger maxIiaIds;
+  private final BigInteger maxIiaIds;
 
   public EwpInterInstitutionalAgreementApprovalApiConfiguration(
       String url,

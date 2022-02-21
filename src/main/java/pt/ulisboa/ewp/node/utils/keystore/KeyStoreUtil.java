@@ -41,6 +41,6 @@ public class KeyStoreUtil {
   public static boolean isSelfIssued(KeyStore keyStore, X509Certificate certificate)
       throws KeyStoreException {
     return keyStore.getCertificateChain(keyStore.getCertificateAlias(certificate)).length == 1
-        && certificate.getIssuerDN().equals(certificate.getSubjectDN());
+        && certificate.getIssuerX500Principal().equals(certificate.getSubjectX500Principal());
   }
 }

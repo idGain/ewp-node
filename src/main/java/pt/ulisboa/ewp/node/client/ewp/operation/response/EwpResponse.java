@@ -10,8 +10,8 @@ import pt.ulisboa.ewp.node.utils.http.HttpUtils;
 
 public class EwpResponse implements Serializable {
 
-  private HttpStatus status;
-  private String mediaType;
+  private final HttpStatus status;
+  private final String mediaType;
   private ExtendedHttpHeaders headers = new ExtendedHttpHeaders();
   private String rawBody = "";
 
@@ -76,7 +76,7 @@ public class EwpResponse implements Serializable {
 
   public static class Builder {
 
-    private HttpStatus status;
+    private final HttpStatus status;
     private String mediaType;
     private ExtendedHttpHeaders headers = new ExtendedHttpHeaders();
     private String rawBody = "";

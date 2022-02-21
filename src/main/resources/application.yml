@@ -11,15 +11,19 @@ baseContextPath:
 
 # Database configuration for the node itself (for keystore management and others)
 db:
-  driverClassName: org.h2.Driver
-  url: jdbc:h2:mem:ewp_node__tests;DB_CLOSE_DELAY=-1
+  driverClassName: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/ewp_node_test
+  # jdbc:h2:mem:ewp_node__tests;DB_CLOSE_DELAY=-1
   #  url: jdbc:h2:tcp://127.0.0.1:9090/mem:ewp_node_tests;DB_CLOSE_DELAY=-1 # Uncomment this line for DB debugging (requires an H2 TCP server)
-  username: sa
-  password:
+  username: kionewp
+  password: kionewp
   hibernate:
-    dialect: org.hibernate.dialect.H2Dialect
+    dialect: pt.ulisboa.ewp.node.utils.CustomPostgresqlDialect
+    #org.hibernate.dialect.H2Dialect
     hbm2ddlAuto: create
-    timeZone: Europe/Lisbon
+    #update
+    show_sql: true
+    timeZone: Europe/Istanbul
 
 # EWP registry configuration
 registry:

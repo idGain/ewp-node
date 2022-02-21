@@ -19,7 +19,7 @@ import pt.ulisboa.ewp.node.domain.utils.DatabaseProperties;
 @EnableTransactionManagement
 public class DomainConfig {
 
-  private DatabaseProperties databaseProperties;
+  private final DatabaseProperties databaseProperties;
 
   public DomainConfig(DatabaseProperties databaseProperties) {
     this.databaseProperties = databaseProperties;

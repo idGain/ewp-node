@@ -24,7 +24,7 @@ import pt.ulisboa.ewp.node.utils.http.HttpConstants;
 /** Filter that prepares the environment for further EWP authentication methods. */
 public class EwpApiPreAuthenticationFilter extends OncePerRequestFilter {
 
-  private Jaxb2Marshaller jaxb2Marshaller;
+  private final Jaxb2Marshaller jaxb2Marshaller;
 
   public EwpApiPreAuthenticationFilter(Jaxb2Marshaller jaxb2Marshaller) {
     this.jaxb2Marshaller = jaxb2Marshaller;

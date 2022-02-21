@@ -161,6 +161,6 @@ public abstract class EwpChangeNotification {
     SUCCESS,
     FAILED_MAX_ATTEMPTS,
     FAILED_NO_CNR_API_AVAILABLE,
-    MERGED;
+    MERGED
   }
 }

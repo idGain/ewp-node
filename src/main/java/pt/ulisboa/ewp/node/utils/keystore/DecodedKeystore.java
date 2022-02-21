@@ -11,8 +11,8 @@ import java.util.Map;
 
 public class DecodedKeystore {
 
-  private KeyStore keyStore;
-  private String keyStorePassword;
+  private final KeyStore keyStore;
+  private final String keyStorePassword;
 
   private Map<String, DecodedCertificateAndKey> decodedCertificateAndKeys;
 

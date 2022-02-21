@@ -653,17 +653,17 @@ public class EchoControllerIntegrationTest extends AbstractEwpControllerIntegrat
 
   private static class InvalidEchoHttpSignatureTestDataWrapper {
 
-    private HttpHeaders additionalHeaders = new HttpHeaders();
+    private final HttpHeaders additionalHeaders = new HttpHeaders();
     private List<String> echo = Collections.emptyList();
-    private Function<List<String>, MockHttpServletRequestBuilder> requestBuilder;
+    private final Function<List<String>, MockHttpServletRequestBuilder> requestBuilder;
 
     private String keyId = UUID.randomUUID().toString();
     private Algorithm algorithm = Algorithm.RSA_SHA256;
     private String signatureParameter;
     private String[] signatureHeaders = EXPECTED_SIGNATURE_HEADERS_WITH_DATE;
 
-    private HttpStatus expectedStatus;
-    private String errorMessage;
+    private final HttpStatus expectedStatus;
+    private final String errorMessage;
 
     private String host = "localhost";
     private ZonedDateTime date = ZonedDateTime.now();

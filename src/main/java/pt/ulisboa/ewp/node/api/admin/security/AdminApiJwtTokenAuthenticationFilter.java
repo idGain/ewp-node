@@ -24,8 +24,8 @@ import pt.ulisboa.ewp.node.domain.entity.user.UserRole;
  */
 public class AdminApiJwtTokenAuthenticationFilter extends AbstractJwtTokenAuthenticationFilter {
 
-  private AdminApiUserRolesPopulator userRolesPopulator;
-  private String secret;
+  private final AdminApiUserRolesPopulator userRolesPopulator;
+  private final String secret;
 
   public AdminApiJwtTokenAuthenticationFilter(
       AuthenticationManager authenticationManager,

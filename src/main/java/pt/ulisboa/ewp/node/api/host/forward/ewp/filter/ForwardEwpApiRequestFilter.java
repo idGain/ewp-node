@@ -27,7 +27,7 @@ import pt.ulisboa.ewp.node.service.http.log.host.HostHttpCommunicationLogService
 @Order(Integer.MIN_VALUE)
 public class ForwardEwpApiRequestFilter extends OncePerRequestFilter {
 
-  private HostHttpCommunicationLogService hostCommunicationLogService;
+  private final HostHttpCommunicationLogService hostCommunicationLogService;
 
   public ForwardEwpApiRequestFilter(HostHttpCommunicationLogService hostCommunicationLogService) {
     this.hostCommunicationLogService = hostCommunicationLogService;

@@ -8,9 +8,9 @@ import org.apache.commons.codec.digest.DigestUtils;
 
 public class DecodedCertificateAndKey {
 
-  private Certificate certificate;
+  private final Certificate certificate;
 
-  private Key privateKey;
+  private final Key privateKey;
   private Key rsaPublicKey;
 
   private String formattedRsaPublicKey;

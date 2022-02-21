@@ -9,7 +9,7 @@ import pt.ulisboa.ewp.node.service.ewp.security.verifier.EwpAuthenticationResult
 @Service
 public class ResponseAuthenticationVerifier {
 
-  private Collection<AbstractResponseAuthenticationMethodVerifier> authenticationVerifiers;
+  private final Collection<AbstractResponseAuthenticationMethodVerifier> authenticationVerifiers;
 
   public ResponseAuthenticationVerifier(
       Collection<AbstractResponseAuthenticationMethodVerifier> authenticationVerifiers) {

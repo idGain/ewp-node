@@ -51,7 +51,7 @@ public class KeyStoreService {
 
   @Autowired private KeyStoreConfigurationRepository keyStoreConfigurationRepository;
 
-  private SecurityProperties securityProperties;
+  private final SecurityProperties securityProperties;
   private Supplier<DecodedKeystore> decodedKeyStoreSupplier;
   private Supplier<DecodedCertificateAndKey> decodedCertificateAndKeySupplier;
 
